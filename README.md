@@ -13,15 +13,16 @@ ConfirmationAPI.initialize(yorplugin);
 
 Any example:
 ```java
-//Creating inventory
+//Creating inventory.
 Inventory inv = Bukkit.createInventory(null, 27, "Test confirm");
 
 //Registering dialog
 ConfirmationDialog dialog = ConfirmationAPI.getInventoryManager().registerDialog("Test", inv, 12, 14, (condition, player) -> {
-player.closeInventory();
-player.sendMessage("You clicked: " + (condition ? "Yes" : "No"));
+    //Handle player response.
+    player.closeInventory();
+    player.sendMessage("You clicked: " + (condition ? "Yes" : "No"));
 });
 
-//Opening dialog
+//Opening dialog for any player.
 player.openInventory(dialog.getInventory());
 ```
