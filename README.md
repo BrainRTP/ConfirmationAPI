@@ -4,7 +4,7 @@ Simple Bukkit plugin API for listetning player confirmation responses ("yes", "n
 
 ###Usage
 
-If yot use API as external plugin, so yot do not need to initialize API.
+If yot use API as external plugin, so you do not need to initialize API.
 Otherwise, you need to initialize it with your plugin:
 
 ```java
