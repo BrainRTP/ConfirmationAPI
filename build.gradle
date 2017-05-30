@@ -1,0 +1,27 @@
+plugins {
+    id "ru.endlesscode.bukkitgradle" version "0.5.7"
+}
+
+group 'me.catcoder'
+version '1.0-SNAPSHOT'
+
+
+bukkit {
+    version = "1.8.8"
+
+    run {
+        eula = true
+        onlineMode = true
+        debug = false
+    }
+
+    meta {
+        authors = ["CatCoder"]
+        main = "me.catcoder.confirmation.plugin.ConfirmationPlugin"
+    }
+}
+
+tasks.withType(Jar) {
+    destinationDir = file("$rootDir")
+}
+
